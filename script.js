@@ -101,3 +101,38 @@ const revealObserver = new IntersectionObserver(
 revealElements.forEach(function (el) {
   revealObserver.observe(el);
 });
+// ── FEATURE 6 — FORM SUBMISSION FEEDBACK ──
+
+const contactForm = document.getElementById("contact-form");
+const successMessage = document.getElementById("success-message");
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  successMessage.style.display = "flex";
+  contactForm.reset();
+  setTimeout(function () {
+    successMessage.style.display = "none";
+  }, 5000);
+});
+// ── FEATURE 7 — ACTIVE NAV LINK HIGHLIGHT ──
+const sections = document.querySelectorAll("section");
+const navLinksList = document.querySelectorAll(".nav-links a");
+window.addEventListener("scroll", function () {
+  let currentSection = "";
+  sections.forEach(function (section) {
+    const sectionTop = section.offsetTop - 100;
+    const sectionHeight = section.offsetHeight;
+    if (
+      window.scrollY >= sectionTop &&
+      window.scrollY < sectionTop + sectionHeight
+    ) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  navLinksList.forEach(function (link) {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + currentSection) {
+      link.classList.add("active");
+    }
+  });
+});
