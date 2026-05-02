@@ -102,16 +102,35 @@ revealElements.forEach(function (el) {
   revealObserver.observe(el);
 });
 // ── FEATURE 6 — FORM SUBMISSION FEEDBACK ──
-
 const contactForm = document.getElementById("contact-form");
 const successMessage = document.getElementById("success-message");
+
 contactForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  successMessage.style.display = "flex";
-  contactForm.reset();
-  setTimeout(function () {
-    successMessage.style.display = "none";
-  }, 5000);
+
+  const formData = new FormData(contactForm);
+
+  fetch(contactForm.action, {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then(function (response) {
+      if (response.ok) {
+        successMessage.style.display = "flex";
+        contactForm.reset();
+        setTimeout(function () {
+          successMessage.style.display = "none";
+        }, 5000);
+      } else {
+        alert("Oops! Something went wrong. Please try again.");
+      }
+    })
+    .catch(function (error) {
+      alert("Oops! Something went wrong. Please try again.");
+    });
 });
 // ── FEATURE 7 — ACTIVE NAV LINK HIGHLIGHT ──
 const sections = document.querySelectorAll("section");
