@@ -126,6 +126,7 @@ a {
   align-items: center;
   text-align: center;
   position: relative;
+  width: 100%;
 }
 #hero::before {
   content: "";
