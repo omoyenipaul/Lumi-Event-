@@ -16,7 +16,6 @@ body {
   width: 100%;
 }
 
-
 body {
   font-family: "Lato", sans-serif;
   color: #0a0a0a;
@@ -119,13 +118,14 @@ a {
   height: 100vh;
   background-image: url("./Images/Hero.jpg.jpeg");
   background-size: cover;
-  background-position: center-top;
+  background-position: center top;
   background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   position: relative;
+  overflow: hidden;
   width: 100%;
 }
 #hero::before {
@@ -1134,8 +1134,11 @@ footer {
 }
 @media (max-width: 768px) {
   /*FOR NAV*/
+  #navbar {
+    padding: 15px 20px;
+  }
   .nav-links {
-    display: none;
+    display: none !important;
     flex-direction: column;
     position: fixed;
     top: 0;
@@ -1149,18 +1152,24 @@ footer {
     z-index: 999;
   }
   .nav-links.open {
-    display: flex;
+    display: flex !important;
   }
   .nav-links a {
     font-size: 1.3rem;
   }
   .hamburger {
-    display: block;
+    display: block !important;
     z-index: 1001;
   }
   /*FOR HERO*/
+  #hero {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
   .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 1.8rem !important;
+    word-wrap: break-word !important;
   }
   /*FOR ABOUT US*/
   .about-container {
