@@ -18,7 +18,7 @@ body {
 
 body {
   font-family: "Lato", sans-serif;
-  color: #0a0a0a;
+  color: #333333;
   background-color: #fff;
 }
 
@@ -30,9 +30,11 @@ h3 {
 
 h2 {
   font-size: 2.5rem;
+  font-weight: 700;
+  color: #0d0d0d;
   text-align: center;
   margin-bottom: 40px;
-  color: #0a0a0a;
+  color: #0d0d0d;
 }
 
 section {
@@ -48,7 +50,7 @@ a {
   display: inline-block;
   padding: 14px 32px;
   background-color: #d4af37;
-  color: #fff;
+  color: #0d0d0d;
   border-radius: 4px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -57,7 +59,7 @@ a {
   cursor: pointer;
 }
 .btn:hover {
-  background-color: #b8960f;
+  background-color: #c5a028;
 }
 
 /*NAVBAR*/
@@ -74,7 +76,7 @@ a {
   transition: background-color 0.3s ease, padding 0.3s ease;
 }
 #navbar.scrolled {
-  background-color: #0a0a0a;
+  background-color: #0d0d0d;
   padding: 12px 40px;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
@@ -241,7 +243,7 @@ a {
 .about-text p {
   font-size: 1rem;
   line-height: 1.9;
-  color: #444;
+  color: #333333;
   margin-bottom: 15px;
 }
 .about-text .btn {
@@ -263,7 +265,7 @@ a {
 }
 .stat p {
   font-size: 0.85rem;
-  color: #666;
+  color: #333333;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 0;
@@ -325,12 +327,12 @@ a {
 }
 .service-card h3 {
   font-size: 1.3rem;
-  color: #0a0a0a;
+  color: #0d0d0d;
   margin-bottom: 12px;
 }
 .service-card p {
   font-size: 0.98rem;
-  color: #666;
+  color: #333333;
   line-height: 1.7;
 }
 .service-list {
@@ -352,7 +354,7 @@ a {
 }
 /* ── PRODUCTS SECTION ── */
 #products {
-  background-color: #0a0a0a;
+  background-color: #0d0d0d;
 }
 
 #products h2 {
@@ -374,7 +376,7 @@ a {
 
 p.products-subtitle {
   text-align: center;
-  color: #aaa;
+  color: #aaaaaa;
   margin-top: -20px;
   margin-bottom: 50px;
   font-size: 1rem;
@@ -393,7 +395,7 @@ p.products-subtitle {
   background-color: rgba(255, 255, 255, 0.04);
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  border: 1px solid rgba(212, 175, 55, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -420,7 +422,7 @@ p.products-subtitle {
 }
 
 .product-placeholder {
-  background-color: rgba(201, 168, 76, 0.08);
+  background-color: rgba(212, 175, 55, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -442,7 +444,7 @@ p.products-subtitle {
 
 .product-info p {
   font-size: 0.95rem;
-  color: #aaa;
+  color: #aaaaaa;
   line-height: 1.7;
   margin-bottom: 20px;
 }
@@ -455,7 +457,7 @@ p.products-subtitle {
 }
 /*WHY CHOOSE US*/
 #why-us {
-  background-color: #0a0a0a;
+  background-color: #0d0d0d;
   position: relative;
   overflow: hidden;
 }
@@ -468,7 +470,7 @@ p.products-subtitle {
   height: 200%;
   background: radial-gradient(
     circle,
-    rgba(201, 168, 76, 0.05) 0%,
+    rgba(212, 175, 55, 0.05) 0%,
     transparent 60%
   );
   pointer-events: none;
@@ -499,12 +501,12 @@ p.products-subtitle {
 .why-card {
   text-align: center;
   padding: 40px 25px;
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  border: 1px solid rgba(212, 175, 55, 0.2);
   border-radius: 8px;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 .why-card:hover {
-  background-color: rgba(201, 168, 76, 0.08);
+  background-color: rgba(212, 175, 55, 0.08);
   transform: translateY(-8px) !important;
 }
 .why-icon {
@@ -519,7 +521,7 @@ p.products-subtitle {
 }
 .why-card p {
   font-size: 0.9rem;
-  color: #aaa;
+  color: #aaaaaa;
   line-height: 1.7;
 }
 /*GALLERY*/
@@ -587,7 +589,7 @@ p.products-subtitle {
 }
 /* ── VIDEO SECTION ── */
 #videos {
-  background-color: #0a0a0a;
+  background-color: #0d0d0d;
   text-align: center;
 }
 
@@ -609,7 +611,7 @@ p.products-subtitle {
 }
 
 #videos p.video-subtitle {
-  color: #aaa;
+  color: #aaaaaa;
   margin-top: -20px;
   margin-bottom: 50px;
   font-size: 1rem;
@@ -628,7 +630,7 @@ p.products-subtitle {
   border-radius: 8px;
   overflow: hidden;
   position: relative;
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  border: 1px solid rgba(212, 175, 55, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -660,7 +662,7 @@ p.products-subtitle {
 }
 
 .video-label p {
-  color: #aaa;
+  color: #aaaaaa;
   font-size: 0.85rem;
 }
 /*TESTIMONIALS*/
@@ -740,7 +742,7 @@ p.products-subtitle {
 }
 .author-info h4 {
   font-size: 1rem;
-  color: #0a0a0a;
+  color: #0d0d0d;
   margin-bottom: 4px;
 }
 .author-info span {
@@ -795,7 +797,7 @@ p.products-subtitle {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: #0a0a0a;
+  color: #0d0d0d;
   transition: color 0.3s ease;
 }
 .faq-question:hover h3 {
@@ -823,7 +825,7 @@ p.products-subtitle {
 }
 .faq-answer p {
   font-size: 0.95rem;
-  color: #666;
+  color: #333333;
   line-height: 1.8;
 }
 
@@ -857,7 +859,7 @@ p.products-subtitle {
 }
 .contact-info h3 {
   font-size: 1.5rem;
-  color: #0a0a0a;
+  color: #0d0d0d;
   margin-bottom: 20px;
 }
 .contact-info p {
@@ -897,19 +899,20 @@ p.products-subtitle {
 }
 .contact-detail-item p {
   font-size: 0.95rem;
-  color: #0a0a0a;
+  color: #0d0d0d;
   margin-bottom: 0;
   font-weight: 600;
 }
 .whatsapp-btn {
-  background-color: #25d366;
+  background-color: #25d366 !important;
+  color: #fff !important;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   font-size: 0.95rem;
 }
 .whatsapp-btn:hover {
-  background-color: #1da851;
+  background-color: #1da851 !important;
 }
 .contact-form {
   flex: 1;
@@ -920,7 +923,7 @@ p.products-subtitle {
 }
 .contact-form h3 {
   font-size: 1.4rem;
-  color: #0a0a0a;
+  color: #0d0d0d;
   margin-bottom: 25px;
 }
 .form-group {
@@ -934,7 +937,7 @@ p.products-subtitle {
 .form-group label {
   display: block;
   font-size: 0.85rem;
-  color: #666;
+  color: #333333;
   margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -948,7 +951,7 @@ p.products-subtitle {
   border-radius: 4px;
   font-family: "Lato", sans-serif;
   font-size: 0.95rem;
-  color: #0a0a0a;
+  color: #0d0d0d;
   background-color: #fafafa;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   outline: none;
@@ -957,7 +960,7 @@ p.products-subtitle {
 .form-group textarea:focus,
 .form-group select:focus {
   border-color: #d4af37;
-  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
   background-color: #fff;
 }
 .form-group textarea {
@@ -973,10 +976,10 @@ p.products-subtitle {
 }
 /* ── SUCCESS MESSAGE ── */
 #success-message {
-  display: none;
+  display: none !important;
   align-items: center;
   gap: 12px;
-  background-color: rgba(201, 168, 76, 0.1);
+  background-color: rgba(212, 175, 55, 0.1);
   border: 1px solid #d4af37;
   border-radius: 4px;
   padding: 15px 20px;
@@ -990,14 +993,14 @@ p.products-subtitle {
 
 #success-message p {
   font-size: 0.95rem;
-  color: #0a0a0a;
+  color: #0d0d0d;
   margin-bottom: 0;
 }
 /*FOOTER-SECTION*/
 footer {
-  background-color: #0a0a0a;
+  background-color: #0d0d0d;
   padding: 60px 20px 30px;
-  color: #aaa;
+  color: #aaaaaa;
 }
 .footer-container {
   display: grid;
@@ -1016,7 +1019,7 @@ footer {
 .footer-brand p {
   font-size: 0.9rem;
   line-height: 1.8;
-  color: #888;
+  color: #aaaaaa;
   max-width: 280px;
 }
 .footer-socials {
@@ -1028,12 +1031,12 @@ footer {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid rgba(201, 168, 76, 0.3);
+  border: 1px solid rgba(212, 175, 55, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  color: #aaa;
+  color: #aaaaaa;
   transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 .social-link:hover {
@@ -1056,7 +1059,7 @@ footer {
   gap: 12px;
 }
 .footer-links ul li a {
-  color: #888;
+  color: #aaaaaa;
   font-size: 0.9rem;
   transition: color 0.3s ease;
 }
@@ -1073,7 +1076,7 @@ footer {
 }
 .footer-contact p {
   font-size: 0.9rem;
-  color: #888;
+  color: #aaaaaa;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1090,7 +1093,7 @@ footer {
 }
 .footer-bottom p {
   font-size: 0.85rem;
-  color: #666;
+  color: #333333;
 }
 .footer-bottom span {
   color: #d4af37;
@@ -1145,7 +1148,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #0a0a0a;
+    background-color: #0d0d0d;
     justify-content: center;
     align-items: center;
     gap: 40px;
