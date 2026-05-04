@@ -1,3 +1,13 @@
+// ── HERO SLIDESHOW ──
+const heroSlides = document.querySelectorAll(".hero-slide");
+let currentSlide = 0;
+
+function nextSlide() {
+  heroSlides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + 1) % heroSlides.length;
+  heroSlides[currentSlide].classList.add("active");
+}
+setInterval(nextSlide, 5000);
 // ── 1. NAVBAR SCROLL ──
 window.addEventListener("scroll", function () {
   const navbar = document.getElementById("navbar");
