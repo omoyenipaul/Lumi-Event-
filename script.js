@@ -111,35 +111,42 @@ const revealObserver = new IntersectionObserver(
 revealElements.forEach(function (el) {
   revealObserver.observe(el);
 });
-// ── FEATURE 6 — FORM SUBMISSION FEEDBACK ──
+// ── FEATURE 6: FORM SUBMISSION (Google Sheets) ──
+const SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbxmdYoRcd51C49xXjd-XfZiHQZ2uDe33gErvf1UF6eV2gbawOz-e1GqLNdLYVTJHvDpBA/exec";
 const contactForm = document.getElementById("contact-form");
 const successMessage = document.getElementById("success-message");
 
 contactForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const formData = new FormData(contactForm);
+  const btn = contactForm.querySelector("button[type='submit']");
+  btn.disabled = true;
+  btn.textContent = "Sending...";
 
-  fetch(contactForm.action, {
+  fetch(SCRIPT_URL, {
     method: "POST",
-    body: formData,
-    headers: {
-      Accept: "application/json",
-    },
+    body: new URLSearchParams(new FormData(contactForm)),
   })
-    .then(function (response) {
-      if (response.ok) {
-        successMessage.style.display = "flex";
-        contactForm.reset();
-        setTimeout(function () {
-          successMessage.style.display = "none";
-        }, 5000);
-      } else {
-        alert("Oops! Something went wrong. Please try again.");
-      }
+    .then(function (res) {
+      return res.json();
     })
-    .catch(function (error) {
-      alert("Oops! Something went wrong. Please try again.");
+    .then(function (data) {
+      if (data.result !== "success") throw new Error(data.message);
+      successMessage.style.display = "flex";
+      contactForm.reset();
+      setTimeout(function () {
+        successMessage.style.display = "none";
+      }, 5000);
+    })
+    .catch(function () {
+      alert(
+        "Something went wrong. Please try again or message us on WhatsApp."
+      );
+    })
+    .finally(function () {
+      btn.disabled = false;
+      btn.textContent = "Send Message";
     });
 });
 // ── FEATURE 7 — ACTIVE NAV LINK HIGHLIGHT ──
@@ -163,5 +170,16 @@ window.addEventListener("scroll", function () {
     if (link.getAttribute("href") === "#" + currentSection) {
       link.classList.add("active");
     }
+  });
+});
+//-- STOP AUTO PLAY IN VIDEOS --
+const Allvideos = document.querySelectorAll("video");
+Allvideos.forEach(function (video) {
+  video.addEventListener("play", function () {
+    Allvideos.forEach(function (otherVideo) {
+      if (otherVideo !== video) {
+        otherVideo.pause();
+      }
+    });
   });
 });
